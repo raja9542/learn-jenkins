@@ -10,7 +10,12 @@ pipeline{
      steps{
        echo "hello world"
      }
-
    }
+ }
+
+ post{
+     always{
+         echo "Send Email"
+     }
  }
 }
