@@ -17,5 +17,8 @@ pipeline{
      always{
          echo "Send Email"
      }
+     changed{
+         echo "something"
+     }
  }
 }
