@@ -6,19 +6,19 @@ pipeline{
 
  stages{
 
-   stage('Hello World'){
+   stage('Hello World1'){
      steps{
        echo "hello world"
      }
    }
 
-     stage('Hello World'){
+     stage('Hello World2'){
          steps{
              echo "hello world"
          }
      }
 
-     stage('Hello World'){
+     stage('Hello World3'){
          steps{
              echo "hello world"
          }
