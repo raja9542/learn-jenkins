@@ -11,6 +11,18 @@ pipeline{
        echo "hello world"
      }
    }
+
+     stage('Hello World'){
+         steps{
+             echo "hello world"
+         }
+     }
+
+     stage('Hello World'){
+         steps{
+             echo "hello world"
+         }
+     }
  }
 
  post{
