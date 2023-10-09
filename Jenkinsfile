@@ -5,8 +5,9 @@ pipeline{
  }
 
  stages{
-     addBadge icon: 'text.gif', id: '', link: '', text: 'github'
+
    stage('Hello World1'){
+       addBadge icon: 'text.gif', id: '', link: '', text: 'github'
      steps{
        echo "hello world"
      }
