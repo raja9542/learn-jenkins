@@ -1,37 +1,76 @@
+import org.apache.groovy.util.JavaShellCompilationException
+import org.codehaus.groovy.tools.javac.RawJavaFileObject
+
+//pipeline{
+//
+// agent {
+//     label 'ansible'
+// }
+//
+// stages{
+//
+//   stage('Hello World1'){
+//
+//     steps{
+//       echo "hello world"
+//     }
+//   }
+//
+//     stage('Hello World2'){
+//         steps{
+//             echo "hello world"
+//         }
+//     }
+//
+//     stage('Hello World3'){
+//         steps{
+//             echo "hello world"
+//         }
+//     }
+// }
+//
+// post{
+//     always{
+//         echo "Send Email"
+//     }
+//     changed{
+//         echo "something"
+//     }
+// }
+//}
+
+@Library('roboshop') _
+
 pipeline{
+    agent{
+        label 'any'
+    }
 
- agent {
-     label 'ansible'
- }
+    stages{
 
- stages{
+        stage(test1){
+            steps{
+                script{
+                    def.abc="Hello"
+                    env.xyz="Hi Raj"
 
-   stage('Hello World1'){
-       addBadge icon: 'text.gif', id: '', link: '', text: 'github'
-     steps{
-       echo "hello world"
-     }
-   }
+                    print "abc= ${abc}"
+                    print "xyz= ${xyz}"
+                    print xyz
+                }
 
-     stage('Hello World2'){
-         steps{
-             echo "hello world"
-         }
-     }
+                script{
+                    print xyz
+                }
+            }
+        }
+        stage(test2){
+            steps{
+                script{
+                    print xyz
+                }
+            }
+        }
 
-     stage('Hello World3'){
-         steps{
-             echo "hello world"
-         }
-     }
- }
-
- post{
-     always{
-         echo "Send Email"
-     }
-     changed{
-         echo "something"
-     }
- }
+    }
 }
