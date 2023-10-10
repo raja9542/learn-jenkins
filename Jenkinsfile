@@ -50,6 +50,17 @@ pipeline {
                    print "xyz= ${xyz}"
                    print abc
                }
+               script{
+                   print abc
+
+               }
+           }
+       }
+       stage('test2'){
+           steps{
+               script{
+                   print abc
+               }
            }
        }
    }
