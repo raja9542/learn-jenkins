@@ -45,7 +45,7 @@ pipeline{
         stage(test1){
             steps{
                 script{
-                    def.abc="Hello"
+                    def abc="Hello"
                     env.xyz="Hi Raj"
 
                     print "abc= ${abc}"
