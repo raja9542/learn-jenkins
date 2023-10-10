@@ -39,10 +39,7 @@
 @Library('roboshop') _
 
 pipeline{
-    agent{
-        label 'any'
-    }
-
+    agent any
     stages{
 
         stage(test1){
