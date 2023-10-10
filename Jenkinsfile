@@ -1,6 +1,3 @@
-import org.apache.groovy.util.JavaShellCompilationException
-import org.codehaus.groovy.tools.javac.RawJavaFileObject
-
 //pipeline{
 //
 // agent {
